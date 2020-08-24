@@ -2,7 +2,9 @@ package oop
 
 interface Drivable {
     val a: Int
-    fun drive()
+    fun drive() {
+        println("Driving (interface)")
+    }
 }
 
 class Bicycle : Drivable {
@@ -25,5 +27,5 @@ class Boat : Drivable {
 fun main() {
     val drivable: Drivable = Bicycle()
     drivable.drive()
-    
+
 }
