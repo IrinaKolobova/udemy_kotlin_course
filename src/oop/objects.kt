@@ -1,7 +1,8 @@
 package oop
 
-import java.awt.event.MouseAdapter
-import java.awt.event.MouseEvent
+import java.awt.event.*
+import oop.House.Companion.getNormalHouse as createHouse
+
 
 object CountryFactory {
 
@@ -18,4 +19,6 @@ object  DefaultListener : MouseAdapter() {
 fun main() {
     CountryFactory.a
     CountryFactory.createCountry()
+
+    createHouse()
 }
