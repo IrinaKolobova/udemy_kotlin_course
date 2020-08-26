@@ -22,8 +22,14 @@ fun main() {
     // val students2: MutableList<Person> = mutableListOf<Student>()
     // students2.add(Person())
 
-    
+    // Using Kotlin TimeSeries
+    val events: TimeSeries<Person> = timeSeriesOf()
+    val students3: List<Student> = listOf(Student(), Student())
+    events.addAll(students3) // covariance
 
-
+    // Using Java TimeSeries
+    val chartData: JavaTimeSeries<Person> = JavaTimeSeries()
+    chartData.add(Student()) // covariance
+    chartData.addAll(students3) // covariance
 
 }
